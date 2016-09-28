@@ -1,0 +1,62 @@
+#include<stdio.h>
+main()
+{
+printf(“\n------Menu Pilihan-----“);
+printf (“1.Perhitungan Nilai\n”);
+printf (“2.Status Kelulusan\n”);
+printf (“3.Keterangan Nilai\n”);
+printf (“4.Exit\n”);
+printf(“Masukkan pilihan [1..3] : “);
+scanf (“%d”,&pilihan);
+switch (pilihan)
+{
+case 1:
+printf (“\n==================\n”);
+printf (“\n1.Perhitungan Nilai\n”);
+printf (“UTS =                        “);
+scanf (“%d”,&UTS);
+printf (“UAS =            “);
+scanf (“%d”,&UAS);
+total = (UTS+UAS)/2;
+printf (“Total =%d \n”,total);
+break;
+case 2:
+printf (“\n===================\n”);
+printf (“\n2.Status Kelulusan\n”);
+printf (“Masukkan Total Nilai =  “);
+scanf (“%d”,&total);
+if (total  >= 65 && total <=100)
+printf (“Anda LULUS\n”);
+else
+printf (“Anda GAGAL\n”);
+break;
+case 3:
+printf (“\n=================\n”);
+printf (“\n3.Keterangan Nilai\n”);
+printf (“Masukkan Total Nilai = “);
+scanf (“%d”,&total);
+if (total  >= 90 && total <= 100)
+printf (“Anda mendapat A\n”);
+else if(total  >= 70 && total <= 89)
+printf (“Anda mendapat  B\n”);
+else if (total  >= 50 && total <= 69)
+printf (“Anda mendapat C\n”);
+else if (total  >= 30 && total <= 49)
+printf (“Anda mendapat D\n”);
+else if (total < 30)
+printf (“Anda mendapat E\n”);
+else
+printf (“Nilai yang Anda masukkan salah!);
+break;
+case 4:
+printf ( “\n4.Exit : Silahkan Keluar dan Terima Kasih\n”);
+break;
+default:
+printf (“\nTidak ada pilihan\n”);
+break;
+}
+}
+while (pilihan!=4)
+return 0;
+
+}
