@@ -1,0 +1,12 @@
+   #include <stdio.h>
+        int main() {
+        int angka;
+        printf ("Masukan nilai angka:");
+        scanf ("%d", &angka);
+        printf ("\n Bilangan %d adalah Bilangan ",angka);
+        if (angka%2 == 0)
+            printf ("Genap \n");
+        else
+            printf ("Ganjil \n");
+        return 0;
+        }
